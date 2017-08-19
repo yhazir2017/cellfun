@@ -9,10 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
 
+    @IBOutlet weak var label: UILabel!
+    
+    @IBOutlet weak var animalImage: UIImageView!
+    
+    @IBOutlet weak var animalDescLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        label.text = pets[myIndex]
+        animalDescLabel.text = petDesc[myIndex]
+        animalImage.image = UIImage(named: pets[myIndex] + ".jpg")
+        
     }
 
     override func didReceiveMemoryWarning() {
